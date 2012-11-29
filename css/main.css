@@ -1,0 +1,52 @@
+html, body { height: 100%; width: 100%; margin: 0; }
+
+@font-face {
+    font-family: 'BebasNeueRegular';
+    src: url('fonts/BebasNeue-webfont.eot');
+    src: url('fonts/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/BebasNeue-webfont.woff') format('woff'),
+         url('fonts/BebasNeue-webfont.ttf') format('truetype'),
+         url('fonts/BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: #000;
+    font-size: 62.5%;
+    background: #000 url('img/patern_black.png');
+    padding: 4em 0 5em 5em;
+    position: relative;
+    overflow: hidden;
+}
+
+.wrapper {
+    width: 100%;
+    margin: auto;
+}
+
+header { 
+    height: 80px;
+}
+
+header a { display: inline-block; float: left;}
+header a.back { width: 50px; height: 50px; background: url('img/back_button.png'); margin: 1.5em 2em 0 0; }
+header a.back:hover { background-position: 0 -50px; }
+header a.back:active { background-position: 0 -100px; }
+
+header span { display: inline-block; height: 80px; font-family: 'BebasNeueRegular'; font-size: 3.4em; color: #FFF; margin: .9em 0 1em 1em; padding-left: .2em; float: left; }
+header span::before { content: url('img/sprite_universes.png'); margin-right: .2em; }
+
+/****
+    HUB MENU
+**/
+
+header nav { float: left; margin-left: 3em; margin-top: 1.5em; }
+header nav ul li { float: left; }
+header nav a { width: 50px; height: 50px; margin-left: 1em; background: url('img/sprite_categories.png'); }
+header nav ul li:nth-of-type(2) a { background-position: 0 -50px; }
+header nav ul li:nth-of-type(3) a { background-position: 0 -100px; }
+header nav ul li:nth-of-type(4) a { background-position: 0 -150px; }
+header nav ul li:nth-of-type(5) a { background-position: 0 -200px; }
+
+#container { margin-top: 2em; background: #000; width: 200%; height: 60%; }
