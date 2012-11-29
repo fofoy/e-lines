@@ -1,9 +1,8 @@
 $(function(){
-	/*$(window).scroll(function () { 
-      console.log('ok');
-	});*/
-	/*$("#content").mousewheel(function(event, delta) {
-	  this.scrollLeft -= (delta * 30);
-	  event.preventDefault();
-	});*/
+
+	// Bind scrollable content
+	$('#scrollbar1').tinyscrollbar({ axis: 'x'});
+
+	// Bind tooltips
+	$('nav ul li a').tipsy({gravity:'s'});
 });
