@@ -43,12 +43,23 @@ header h1::before { content: url('img/sprite_universes.png'); margin-right: .2em
 
 header nav { float: left; margin-left: 3em; margin-top: 1.5em; }
 header nav ul li { float: left; }
-header nav a { width: 50px; height: 50px; margin-left: 1em; background: url('img/sprite_categories.png'); }
+header nav a { width: 50px; height: 50px; margin-left: 1em; background: url('img/sprite_categories.png') no-repeat; }
 header nav ul li:nth-of-type(2) a { background-position: 0 -50px; }
 header nav ul li:nth-of-type(3) a { background-position: 0 -100px; }
 header nav ul li:nth-of-type(4) a { background-position: 0 -150px; }
 header nav ul li:nth-of-type(5) a { background-position: 0 -200px; }
-
+/* --- Hover Menu --- */
+header nav a:hover { background-position: -50px 0px; }
+header nav ul li:nth-of-type(2) a:hover { background-position: -50px -50px; }
+header nav ul li:nth-of-type(3) a:hover { background-position: -50px -100px; }
+header nav ul li:nth-of-type(4) a:hover { background-position: -50px -150px; }
+header nav ul li:nth-of-type(5) a:hover { background-position: -50px -200px; }
+/* --- Active Menu --- */
+header nav a:active { background-position: -100px 0px; }
+header nav ul li:nth-of-type(2) a:active { background-position: -100px -50px; }
+header nav ul li:nth-of-type(3) a:active { background-position: -100px -100px; }
+header nav ul li:nth-of-type(4) a:active { background-position: -100px -150px; }
+header nav ul li:nth-of-type(5) a:active { background-position: -100px -200px; }
 /****
     HUB CONTENT
 **/
