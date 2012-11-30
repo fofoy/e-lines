@@ -44,8 +44,9 @@ header h1::before { content: url('img/sprite_universes.png'); margin-right: .2em
 
 #choice {margin:0 auto; margin-top:4%; width:520px; height:520px;}
 #choice ul li {width:250px;height:250px;margin:5px;float:left;}
-#choice ul li a {width:250px;height:250px;display:block;}
-
+#choice ul li a {width:250px;height:250px;display:block; -webkit-transition: all .5s ease-in-out; -moz-transition: all .5s ease-in-out; -ms-transition: all .5s ease-in-out; -o-transition: all .5s ease-in-out; transition: all .5s ease-in-out;}
+#choice ul li a:hover {-webkit-transition: all .5s ease-in-out; -moz-transition: all .5s ease-in-out; -ms-transition: all .5s ease-in-out; -o-transition: all .5s ease-in-out; transition: all .5s ease-in-out;}
+#choice ul li a:active{outline:2px solid white;-webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none; transition: none;}
 #choice ul li:nth-of-type(2) a {background: url('img/univ_montagne.png') no-repeat;} 
 #choice ul li:nth-of-type(3) a {background: url('img/univ_mer.png') no-repeat;} 
 #choice ul li:nth-of-type(4) a {background: url('img/univ_urbain.png') no-repeat;} 
