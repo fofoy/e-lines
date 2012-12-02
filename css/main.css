@@ -18,6 +18,7 @@ body {
     padding: 0;
     position: relative;
     overflow: hidden;
+    font-family: Tahoma, Arial, sans-serif;
 }
 
 header { width: 100%; height: 80px; padding-top: 30px; padding-left: 5em; background-color:rgba(0,0,0,0.25); border-bottom: 1px solid rgba(255,255,255,0.1); }
@@ -92,7 +93,7 @@ header nav ul li:nth-of-type(5) a:active { background-position: -100px -200px; }
 
 #scrollbar1 { width: 97%; padding-left: 5em; clear: both; margin: 2em 0 0 0; }
 #scrollbar1 .viewport { width: 100%; height: 620px; overflow: hidden; position: relative; }
-#scrollbar1 .overview { /*background-color:black;*/ color:white; width: 3400px; height: 100%; list-style: none; position: absolute; left: 0; top: 0; }
+#scrollbar1 .overview { /*background-color:black;*/ color:white; width: 4500px; height: 100%; list-style: none; position: absolute; left: 0; top: 0; }
 #scrollbar1 .thumb .end,
 #scrollbar1 .thumb { background-color: #003D5D; }
 #scrollbar1 .scrollbar { position: fixed; bottom:4px; float: right; width: 15px; z-index:100;}
@@ -101,7 +102,12 @@ header nav ul li:nth-of-type(5) a:active { background-position: -100px -200px; }
 #scrollbar1 .thumb .end { overflow: hidden; height: 5px; width: 13px; }
 #scrollbar1 .disable{ display: none; }
 .noSelect { user-select: none; -o-user-select: none; -moz-user-select: none; -khtml-user-select: none; -webkit-user-select: none; }
-h2 a { display: table; font-family: 'BebasNeueRegular'; font-size: 4.8em; color: #FFF; margin: 0 0 0em 10px; text-decoration: none;}
+
+.category h2 a { display: table; font-family: 'BebasNeueRegular'; font-size: 4.8em; color: #FFF; margin: 0 0 0em 10px; text-decoration: none; }
+.category:nth-of-type(2) h2 a { color: #00aeff; }
+.category:nth-of-type(3) h2 a { color: #e72727; }
+.category:nth-of-type(4) h2 a { color: #00a651; }
+.category:nth-of-type(5) h2 a { color: #ff7e00; }
 
 .category { width: 850px; float: left; }
 .category ul { width: 845px; float: left; }
@@ -111,12 +117,12 @@ h2 a { display: table; font-family: 'BebasNeueRegular'; font-size: 4.8em; color:
 .big { width: 550px; height: 280px; margin: 5px; float: right; }
 .mid { width: 270px; height: 280px; margin: 5px; float: right; }
 .small { width: 270px; height: 135px; margin: 5px; float: right; }
-.category span { width: 100%; height: 50px; position: absolute; bottom: 0; opacity: .75; font-size: 1.8em; }
-.category .small span { height: 35px; }
-.category span.video { background: #00aeff; }
-.category span.athlete { background: #e72727; }
-.category span.event { background: #00a651; }
-.category span.place { background: #ff7e00; }
+.category_content span { width: 100%; height: 50px; position: absolute; bottom: 0; opacity: .75; font-size: 1.5em; color: #FFF; padding: 10px; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; }
+.category_content .small span { height: 35px; }
+.category_content span.video { background: #00aeff; }
+.category_content span.athlete { background: #e72727; }
+.category_content span.event { background: #00a651; }
+.category_content span.place { background: #ff7e00; }
 img { border: 0; }
 
 /****
