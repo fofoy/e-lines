@@ -12,7 +12,16 @@
     <script type="text/javascript" src="js/jquery.tinyscrollbar.min.js"></script>
     <script type="text/javascript" src="js/jquery.tipsy.js"></script>
 
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!--[if (gte IE 6)&(lte IE 8)]>
+    <script type="text/javascript" src="js/selectivizr-min.js"></script>
+    <![endif]-->
+
 </head>
+
 <body>
     <header>
         <a href="index.html" class="back"></a>
@@ -27,8 +36,12 @@
                 <li><a id="scrollbar3-anchor" href="#" title="Athletes"></a></li>
                 <li><a id="scrollbar4-anchor" href="#" title="Events"></a></li>
                 <li><a id="scrollbar5-anchor" href="#" title="Places"></a></li>
+                <li><a id="search" href="#" title="Search"></a></li>
             </ul>
         </nav>
+        <div id="search_area">
+            
+        </div>
     </header>
 
     <div id="scrollbar1">

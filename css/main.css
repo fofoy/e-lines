@@ -21,7 +21,7 @@ body {
     font-family: Tahoma, Arial, sans-serif;
 }
 
-header { width: 100%; height: 80px; padding-top: 30px; padding-left: 5em; background-color:rgba(0,0,0,0.25); border-bottom: 1px solid rgba(255,255,255,0.1); }
+header { width: 100%; height: 80px; padding-top: 30px; padding-left: 5em; background: rgb(0, 0, 0); The Fallback */background-color:rgba(0,0,0,0.25); border-bottom: 1px solid rgba(255,255,255,0.1); }
 
 header a { display: inline-block; float: left;}
 header a.back { width: 50px; height: 50px; background: url('img/back_button.png'); margin: 1.5em 2em 0 0; }
@@ -70,23 +70,30 @@ header h1::before { content: url('img/sprite_universes.png'); margin-right: .2em
 
 header nav { float: left; margin-left: 3em; margin-top: 1.5em; }
 header nav ul li { float: left; }
-header nav a { width: 50px; height: 50px; margin-left: 1em; background: url('img/sprite_categories.png') no-repeat; }
+header nav ul li:nth-of-type(6) { position:absolute; right: 2em; }
+header nav a { width: 50px; height: 50px; margin-left: 1em; background: url('img/sprite_global.png') no-repeat; }
 header nav ul li:nth-of-type(2) a { background-position: 0 -50px; }
 header nav ul li:nth-of-type(3) a { background-position: 0 -100px; }
 header nav ul li:nth-of-type(4) a { background-position: 0 -150px; }
 header nav ul li:nth-of-type(5) a { background-position: 0 -200px; }
+header nav ul li:nth-of-type(6) a { background-position: 0 -300px; }
 /* --- Hover Menu --- */
 header nav a:hover { background-position: -50px 0px; }
 header nav ul li:nth-of-type(2) a:hover { background-position: -50px -50px; }
 header nav ul li:nth-of-type(3) a:hover { background-position: -50px -100px; }
 header nav ul li:nth-of-type(4) a:hover { background-position: -50px -150px; }
 header nav ul li:nth-of-type(5) a:hover { background-position: -50px -200px; }
+header nav ul li:nth-of-type(6) a:hover { background-position: -50px -300px; }
 /* --- Active Menu --- */
 header nav a:active { background-position: -100px 0px; }
 header nav ul li:nth-of-type(2) a:active { background-position: -100px -50px; }
 header nav ul li:nth-of-type(3) a:active { background-position: -100px -100px; }
 header nav ul li:nth-of-type(4) a:active { background-position: -100px -150px; }
 header nav ul li:nth-of-type(5) a:active { background-position: -100px -200px; }
+header nav ul li:nth-of-type(6) a:active, header nav ul li:nth-of-type(6) a.active { background-position: -100px -300px; }
+
+#search_area { width: 200px; height: 100%; background: #000; position: absolute; bottom: -111px; right: 0; display: none; z-index: 2; }
+#search_area.visible { display: block; }
 /****
     HUB CONTENT
 **/

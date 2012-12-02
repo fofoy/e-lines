@@ -30,4 +30,11 @@ $(function(){
     
 	// Bind tooltips
 	$('nav ul li a').tipsy({gravity:'s'});
+
+	// Bind search area
+	$('#search').bind('click', function(){
+		$(this).toggleClass('active');
+		$("#search_area").toggleClass('visible');
+	});
+	
 });
