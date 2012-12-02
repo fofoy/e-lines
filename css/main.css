@@ -20,11 +20,6 @@ body {
     overflow: hidden;
 }
 
-.wrapper {
-    width: 100%;
-    margin: auto;
-}
-
 header { width: 100%; height: 80px; padding-top: 30px; padding-left: 5em; background-color:rgba(0,0,0,0.25); border-bottom: 1px solid rgba(255,255,255,0.1); }
 
 header a { display: inline-block; float: left;}
@@ -95,8 +90,8 @@ header nav ul li:nth-of-type(5) a:active { background-position: -100px -200px; }
     HUB CONTENT
 **/
 
-#scrollbar1 { width: 90%; padding-left: 5em; clear: both; margin: 2em 0 0 0; }
-#scrollbar1 .viewport { width: 100%; height: 590px; overflow: hidden; position: relative; }
+#scrollbar1 { width: 97%; padding-left: 5em; clear: both; margin: 2em 0 0 0; }
+#scrollbar1 .viewport { width: 100%; height: 620px; overflow: hidden; position: relative; }
 #scrollbar1 .overview { /*background-color:black;*/ color:white; width: 3400px; height: 100%; list-style: none; position: absolute; left: 0; top: 0; }
 #scrollbar1 .thumb .end,
 #scrollbar1 .thumb { background-color: #003D5D; }
@@ -110,9 +105,19 @@ h2 a { display: table; font-family: 'BebasNeueRegular'; font-size: 4.8em; color:
 
 .category { width: 850px; float: left; }
 .category ul { width: 845px; float: left; }
-.big { width: 550px; height: 280px; background: #000; margin: 5px; float: right;}
-.mid { width: 270px; height: 280px; background: #000; margin: 5px; float: right;}
-.small { width: 270px; height: 135px; background: #000; margin: 5px; float: right;}
+.category li { position: relative; }
+.category ul li a { display: block; height: 100%; position: relative; }
+.category ul li a:hover { outline: rgba(127, 127, 127, .5) solid 2px; }
+.big { width: 550px; height: 280px; margin: 5px; float: right; }
+.mid { width: 270px; height: 280px; margin: 5px; float: right; }
+.small { width: 270px; height: 135px; margin: 5px; float: right; }
+.category span { width: 100%; height: 50px; position: absolute; bottom: 0; opacity: .75; font-size: 1.8em; }
+.category .small span { height: 35px; }
+.category span.video { background: #00aeff; }
+.category span.athlete { background: #e72727; }
+.category span.event { background: #00a651; }
+.category span.place { background: #ff7e00; }
+img { border: 0; }
 
 /****
     TOOLTIPS
