@@ -36,17 +36,22 @@ $(function(){
         var category = (blockBigWidth + blockMidWidth + marginBlocks*4)
         var overview = category * $('.category').length;
         $('.viewport').height(viewport);
-        $('.big_video').width($('.big_video').height() * 16/9 ); /* Temp */
+        
         $('.small').height(blockSmallHeight);
         $('.mid').height(blockMidHeight);
         $('.big').height(blockBigHeight);
         $('.small').width(blockSmallWidth);
-        $('.video_content .small').height((content - marginBlocks*17)/4); /* Temp */
+        
         $('.mid').width(blockMidWidth);
         $('.big').width(blockBigWidth);
         $('.category').width(category);
         $('.overview').width(overview);
-        $('.overview').width($('.big_video').width() + blockSmallWidth + marginContent); /* Temp */
+        if ($('.big_video').length > 0){
+            $('.big_video').width($('.big_video').height() * 16/9 ); /* Temp */
+            $('.video_content .small').height((content - marginBlocks*17)/4); /* Temp */
+            $('.overview').width($('.big_video').width() + blockSmallWidth + marginContent); /* Temp */
+        }
+        
 
     }
 
