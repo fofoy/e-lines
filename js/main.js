@@ -1,7 +1,7 @@
 $(function(){
 
 	// Bind scrollable content
-	$('#scrollbar1').tinyscrollbar({ axis: 'x'});
+	$('#scrollbar1').tinyscrollbar({ axis: 'x'}); // scrollbar HUB
 
     var scrollbar1 = $('#scrollbar1');
 	var wcategory = $(".category").width();
