@@ -130,7 +130,7 @@ header nav ul li:nth-of-type(6) a:active, header nav ul li:nth-of-type(6) a.acti
 
 .category { width: 850px; float: left; }
 .category_video { width: 1390px; }
-.category ul { width: 845px; float: left; }
+.category ul { width: 100%; float: left; }
 .category_video ul { width: auto; }
 .category li { position: relative; }
 .category ul li a { display: block; height: 100%; position: relative; }
