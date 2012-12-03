@@ -1,7 +1,7 @@
 $(function(){
 
 	// Bind scrollable content
-	$('#scrollbar1').tinyscrollbar({ axis: 'x'}); // scrollbar HUB
+	$('#scrollbar1').tinyscrollbar({ axis: 'x', invertscroll: true });
 
     var scrollbar1 = $('#scrollbar1');
 	var wcategory = $(".category").width();
@@ -36,5 +36,9 @@ $(function(){
 		$(this).toggleClass('active');
 		$("#search_area").toggleClass('visible');
 	});
+
+    $('#search_area ul li').click(function(){
+        $(this).toggleClass('selected');
+    });
 	
 });
