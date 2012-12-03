@@ -138,14 +138,14 @@ header nav ul li:nth-of-type(6) a:active, header nav ul li:nth-of-type(6) a.acti
 
 .noSelect { user-select: none; -o-user-select: none; -moz-user-select: none; -khtml-user-select: none; -webkit-user-select: none; }
 
-.category h2 a, .overview h2 a { display: table; font-family: 'BebasNeueRegular'; font-size: 4.8em; color: #FFF; margin: 0 0 0em 10px; text-decoration: none; }
+.category h2 a, .category_video h2 a { display: table; font-family: 'BebasNeueRegular'; font-size: 4.8em; color: #FFF; margin: 0 0 0em 10px; text-decoration: none; }
 .category:nth-of-type(2) h2 a { color: #00aeff; }
 .category:nth-of-type(3) h2 a { color: #e72727; }
 .category:nth-of-type(4) h2 a { color: #00a651; }
 .category:nth-of-type(5) h2 a { color: #ff7e00; }
 
 .category { width: 850px; float: left; }
-.category_video { width: 1390px; }
+.category_video { width: 100%; }
 .overview ul { width: 100%; float: left; }
 .category_video ul { width: auto; }
 .overview li { position: relative; }
@@ -157,10 +157,11 @@ header nav ul li:nth-of-type(6) a:active, header nav ul li:nth-of-type(6) a.acti
 .small { width: 270px; height: 135px; margin: 5px; float: right; }
 .small img {width:100%;height:100%;}
 .category_video .small { float: left; }
-.big_video { width: 920px; height: 570px;  margin: 5px; float: left; }
+.big_video { height: 100%;  margin: 5px; float: left; }
 .category_video .category_content { margin-left: 5px; }
 .category_content a div { width: 100%; height: 50px; position: absolute; bottom: 0; font-size: 1.5em; color: #FFF; padding: 10px; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; }
 .category_content .small div { height: 35px; }
+.video_content .small { float: left; }
 .category_content div.video { background: rgba(0, 174, 255, .75); }
 .category_content div.athlete { background: rgba(231, 39, 39, .75); }
 .category_content div.event { background: rgba(0, 166, 81, .75); }
