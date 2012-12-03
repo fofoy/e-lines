@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/jquery.tinyscrollbar.min.js"></script>
+    <script type="text/javascript" src="js/jquery.tipsy.js"></script>
+    <script>
+    
+        // Set up the URLs
+        var url = 'http://vimeo.com/api/v2/video/42525271.json?callback=info';
+
+        // This function loads the data from Vimeo
+        var js = document.createElement('script');
+        js.setAttribute('type', 'text/javascript');
+        js.setAttribute('src', url);
+        document.getElementsByTagName('head').item(0).appendChild(js);
+
+        // This function goes through the clips and puts them on the page
+        function info(videos) {
+            var thumbs = document.getElementById('thumbs');
+            thumbs.innerHTML = '';
+
+            for (var i = 0; i < videos.length; i++) {
+                thumbs.setAttribute('src', videos[i].thumbnail_large);
+            }
+        }
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!--[if (gte IE 6)&(lte IE 8)]>
+    <script type="text/javascript" src="js/selectivizr-min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="back"></a>
+        <a href="hub.html">
+            <img src="img/logo.png" alt="e-Lines">
+        </a>
+        <h1>Mountain</h1>
+        <nav>
+            <ul>
+                <li><a id="scrollbar1-anchor" href="#" title="Featured"></a></li>
+                <li><a id="scrollbar2-anchor" href="#" title="Videos"></a></li>
+                <li><a id="scrollbar3-anchor" href="#" title="Athletes"></a></li>
+                <li><a id="scrollbar4-anchor" href="#" title="Events"></a></li>
+                <li><a id="scrollbar5-anchor" href="#" title="Places"></a></li>
+                <li><a id="search" href="#" title="Search"></a></li>
+            </ul>
+        </nav>
+        <div id="search_area">
+            
+        </div>
+    </header>
+
+    <div id="scrollbar1">
+        <div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
+        <div class="viewport">
+            <div class="overview">
+                <div class="category category_video">
+                    <h2><a href="#">Fucking movie</a></h2>
+                    <ul class="category_content">
+                        <li class="big_video">
+                            <a href="">
+                                <img src="" alt="">
+                                <div class="video">
+                                    Athlete Name
+                                    <p>Sport</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="small">
+                            <a href="">
+                                <img src="" alt="">
+                                <div class="video">
+                                    Video Title
+                                </div>
+                            </a>
+                        </li>
+                        <li class="small">
+                            <a href="">
+                                <img src="" alt="">
+                                <div class="video">
+                                    Video Title
+                                </div>
+                            </a>
+                        </li>
+                        <li class="small">
+                            <a href="">
+                                <img src="" alt="">
+                                <div class="video">
+                                    Video Title
+                                </div>
+                            </a>
+                        </li>
+                        <li class="small">
+                            <a href="">
+                                <img src="" alt="">
+                                <div class="video">
+                                    Video Title
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
