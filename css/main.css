@@ -92,8 +92,24 @@ header nav ul li:nth-of-type(4) a:active { background-position: -100px -150px; }
 header nav ul li:nth-of-type(5) a:active { background-position: -100px -200px; }
 header nav ul li:nth-of-type(6) a:active, header nav ul li:nth-of-type(6) a.active { background-position: -100px -300px; }
 
-#search_area { width: 200px; height: 100%; background: #000; position: absolute; bottom: -111px; right: 0; display: none; z-index: 2; }
+#search_area { width: 250px; height: 100%; background-color:rgba(0,0,0,0.9); position: absolute; bottom: -131px; right: 0; display: none; z-index: 2; padding: 1em 0; }
 #search_area.visible { display: block; }
+#search_area label { display: block; color: #FFF; font-size: 1.2em; margin-left: .5em; margin-bottom: .5em; }
+#search_area input[type="text"] { width: 190px; height: 18px; border: 1px solid #FFF; padding: 5px; float: left; margin-left: .5em; }
+#search_area input[type="submit"] { width: 30px; height: 30px; background: #000; border: 1px solid #FFF; color: #FFF; text-align: center; padding: 0; font-size: 1.2em; cursor: pointer; }
+#search_area ul { display: block; width: 100%; height: 100%; margin-top: 2em; }
+#search_area ul li { display: block; height: 25px; padding: .5em; margin-bottom: 1px; }
+#search_area ul li a { display: block; width: 100%; line-height: 25px; color: #FFF; font-size: 1.6em; text-decoration: none; }
+#search_area ul li:hover, #search_area ul li.selected { background: #191919; }
+#search_area ul li a span { display: block; width: 25px; height: 25px; margin-right: .5em; background: url('img/sprite_global.png') no-repeat; background-position: -150px -50px; float: left; }
+#search_area ul li:nth-of-type(2) a span { background-position: -150px -100px; }
+#search_area ul li:nth-of-type(3) a span { background-position: -150px -150px; }
+#search_area ul li:nth-of-type(4) a span { background-position: -150px -200px; }
+#search_area ul li.selected a span { background-position: -150px -75px; }
+#search_area ul li:nth-of-type(2).selected a span { background-position: -150px -125px; }
+#search_area ul li:nth-of-type(3).selected a span { background-position: -150px -175px; }
+#search_area ul li:nth-of-type(4).selected a span { background-position: -150px -225px; }
+
 /****
     HUB CONTENT
 **/
