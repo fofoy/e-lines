@@ -47,6 +47,7 @@ $(function(){
         $('.category').width(category);
         $('.overview').width(overview);
         if ($('.big_video').length > 0){
+            $('.big_video').height(content - marginBlocks*2);
             $('.big_video').width($('.big_video').height() * 16/9 ); /* Temp */
             $('.video_content .small').height((content - marginBlocks*17)/4); /* Temp */
             $('.overview').width($('.big_video').width() + blockSmallWidth + marginContent); /* Temp */
