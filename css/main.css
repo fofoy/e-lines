@@ -158,7 +158,7 @@ header nav ul li:nth-of-type(6) a:active, header nav ul li:nth-of-type(6) a.acti
 .category_video .small { float: left; }
 .big_video { width: 920px; height: 570px;  margin: 5px; float: left; }
 .category_video .category_content { margin-left: 5px; }
-.category_content div { width: 100%; height: 50px; position: absolute; bottom: 0; font-size: 1.5em; color: #FFF; padding: 10px; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; }
+.category_content a div { width: 100%; height: 50px; position: absolute; bottom: 0; font-size: 1.5em; color: #FFF; padding: 10px; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; }
 .category_content .small div { height: 35px; }
 .category_content div.video { background: rgba(0, 174, 255, .75); }
 .category_content div.athlete { background: rgba(231, 39, 39, .75); }

@@ -11,27 +11,7 @@
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/jquery.tinyscrollbar.min.js"></script>
     <script type="text/javascript" src="js/jquery.tipsy.js"></script>
-    <script>
-    
-        // Set up the URLs
-        var url = 'http://vimeo.com/api/v2/video/42525271.json?callback=info';
-
-        // This function loads the data from Vimeo
-        var js = document.createElement('script');
-        js.setAttribute('type', 'text/javascript');
-        js.setAttribute('src', url);
-        document.getElementsByTagName('head').item(0).appendChild(js);
-
-        // This function goes through the clips and puts them on the page
-        function info(videos) {
-            var thumbs = document.getElementById('thumbs');
-            thumbs.innerHTML = '';
-
-            for (var i = 0; i < videos.length; i++) {
-                thumbs.setAttribute('src', videos[i].thumbnail_large);
-            }
-        }
-    </script>
+    <script type="text/javascript" src="js/vimeo.js"></script>
 
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -73,9 +53,10 @@
                     <h2><a href="#">Fucking movie</a></h2>
                     <ul class="category_content">
                         <li class="big_video">
-                            <a href="">
+                            <div id="embed"></div>
+                                <!--
                                 <iframe src="http://player.vimeo.com/video/42525271?autoplay=1" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-                            </a>
+                                -->
                         </li>
                         <li class="small">
                             <a href="">
