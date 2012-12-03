@@ -40,5 +40,37 @@ $(function(){
     $('#search_area ul li').click(function(){
         $(this).toggleClass('selected');
     });
-	
+
+    //Reponsive
+    responsive();
+    $(window).resize(responsive);
+
+    function responsive (argument) {
+        var ratio = 16/9;
+        var scrollbar = 20;
+        var windowHeight = $(window).height();
+        var headerHeight = $('header').height();
+        var marginContent = 40;
+        var marginBlocks = 5;
+        var h2Height = $('h2').height();
+        var viewport = (windowHeight - headerHeight - marginContent*2);
+        var content = viewport - h2Height;
+        var blockSmallHeight = (content - marginBlocks*12)/4;
+        var blockMidHeight = (blockSmallHeight*2 + marginBlocks*2);
+        var blockBigHeight = (blockMidHeight);
+        var blockBigWidth = Math.floor(blockBigHeight*ratio);
+        var blockSmallWidth = ((blockBigWidth - marginBlocks*2)/2);
+        var blockMidWidth = ((blockBigWidth - marginBlocks*2)/2);
+        var category = (blockBigWidth + blockMidWidth + marginBlocks*4)
+        var overview = category * $('.category').length;
+        $('.viewport').height(viewport);
+        $('.small').height(blockSmallHeight);
+        $('.mid').height(blockMidHeight);
+        $('.big').height(blockBigHeight);
+        $('.small').width(blockSmallWidth);
+        $('.mid').width(blockMidWidth);
+        $('.big').width(blockBigWidth);
+        $('.category').width(category);
+        $('.overview').width(overview);
+    }
 });
