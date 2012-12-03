@@ -155,6 +155,7 @@ header nav ul li:nth-of-type(6) a:active, header nav ul li:nth-of-type(6) a.acti
 .big img {width:100%; height:100%;}
 .mid { width: 270px; height: 280px; margin: 5px; float: right; }
 .small { width: 270px; height: 135px; margin: 5px; float: right; }
+.small img {width:100%;height:100%;}
 .category_video .small { float: left; }
 .big_video { width: 920px; height: 570px;  margin: 5px; float: left; }
 .category_video .category_content { margin-left: 5px; }

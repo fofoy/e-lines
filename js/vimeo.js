@@ -19,9 +19,15 @@ function embedVideo(video) {
 // This function uses oEmbed to get the last clip
 function latestVideo(videos) {
     var videoUrl = videos[0].url;
+    document.getElementById('title_video_big').innerHTML = videos[0].title;
 
     // Get the oEmbed stuff
     loadScript(oEmbedUrl + '?url=' + encodeURIComponent(videoUrl) + '&callback=' + oEmbedCallback);
+
+    for (var i = 1; i < 5; i++) {
+      document.getElementById('title_video_small'+(i-1)).innerHTML = videos[i].title;
+      document.getElementById('thumb_video_small'+(i-1)).setAttribute('src', videos[i].thumbnail_large);
+    };
 }
 
 // This function loads the data from Vimeo
