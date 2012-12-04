@@ -24,7 +24,10 @@ function loadScript(url) {
     document.getElementsByTagName('head').item(0).appendChild(js);
 }
 
-// Call our init function when the page loads
-window.onload = function() {
-    loadScript(videosUrl);
-};
+
+
+$(function(){
+	
+	loadScript(videosUrl);
+
+});
