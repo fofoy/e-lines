@@ -1,21 +1,45 @@
 
 //DEBUT VIMEO
+
 var albums = ['2172780','2172803','2172879'] //gold,louisville,island
+var videos_a =[];
 for (var i = 0; i<albums.length;i++) {
     $.getJSON('http://vimeo.com/api/v2/album/' + albums[i] + '/videos.json?callback=?', {format: "json"}, function(videos) {
         for (var j = 0; j < videos.length; j++) {
-            console.log(videos[j].title);
+            console.log(videos[j].id+' '+albums[0]);
         };
-        console.log(albums[i]);
     });
 };
+
 
 
 $(function(){
 
 // Cache les videos de la map
 //$('.small').hide();
+/*
+for (var i = 0; i<albums.length;i++) {
+    var ul = document.getElementById('liste_video');
 
+    var li = document.createElement('li');
+    li.setAttribute('class', 'small '+albums[i]);
+    ul.appendChild(li);
+
+    var a = document.createElement('a');
+    a.setAttribute('href', 'd');
+    li.appendChild(a);
+
+    var img = document.createElement('img');
+    img.setAttribute('src', 'dd');
+    img.setAttribute('alt', 'videos[j].tit');
+    a.appendChild(img);
+
+    var div = document.createElement('div');
+    div.setAttribute('class', 'video');
+    div.innerHTML = 'videos[j].title';
+    a.appendChild(div);
+};
+*/
 // DEBUT GMAP
 //Tableau du style de la map (couleurs)
 var styles = [
@@ -72,7 +96,7 @@ map.mapTypes.set('map_style', styledMap); // Application du style
 map.setMapTypeId('map_style');
 
 //Tableau des markers
-var locs = [ ["-28.0172605", "153.4256987", "Gold Coast", "content", ".2172780","3"], ["38.2567969", "-85.7408659", "Louisville Extreme Park", "content2", ".2172803","4"], ["51.086126", "-2.210767", "TEST3", "content3", ".2172879","1"]];
+var locs = [ ["-28.0172605", "153.4256987", "Gold Coast", "content", ".2172780","4"], ["38.2567969", "-85.7408659", "Louisville Extreme Park", "content2", ".2172803","4"], ["51.086126", "-2.210767", "island", "content3", ".2172879","3"]];
 var image = 'img/pin.png';
 
 //Ajout des markers
