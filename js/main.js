@@ -130,5 +130,17 @@ $(function(){
 	    $("#ul_places li:nth("+i+") a div").empty();//On vide titre+sous titre
 	    $("#ul_places li:nth("+i+") a div").append(donnees.places.item[i].titre+"<p>"+donnees.places.item[i].soustitre+"</p>");//titre+sous titre
 	}
-
+	
+	//Recup query string
+    function getID(){
+    	var regexS = "[\\?&]id=([^&#]*)";
+    	var regex = new RegExp(regexS);
+    	var results = regex.exec(window.location.search);
+    	if(results == null){
+    		return "";
+    	}
+    	else{
+    	return decodeURIComponent(results[1].replace(/\+/g, " "));
+    	}
+	}
 });
