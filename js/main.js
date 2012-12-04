@@ -100,8 +100,8 @@ $(function(){
 	    $("#ul_videos li:nth("+i+") a").attr("href", donnees.videos.item[i].type+".html?id="+donnees.videos.item[i].id);//url
 	    $("#ul_videos li:nth("+i+") a img").attr("src", donnees.videos.item[i].image);//img
 	    $("#ul_videos li:nth("+i+") a div").addClass(donnees.videos.item[i].type);//type
-	    //$("#ul_videos li:nth("+i+") a div").empty();//On vide titre+sous titre
-	    //$("#ul_videos li:nth("+i+") a div").append(donnees.videos.item[i].titre+"<p>"+donnees.videos.item[i].titre+"</p>");//titre+sous titre
+	    $("#ul_videos li:nth("+i+") a div").empty();//On vide titre+sous titre
+	    $("#ul_videos li:nth("+i+") a div").append(donnees.videos.item[i].titre+"<p>"+donnees.videos.item[i].soustitre+"</p>");//titre+sous titre
 	}
 	
 	//athletes
@@ -109,8 +109,26 @@ $(function(){
 	    $("#ul_athletes li:nth("+i+") a").attr("href", donnees.athletes.item[i].type+".html?id="+donnees.athletes.item[i].id);//url
 	    $("#ul_athletes li:nth("+i+") a img").attr("src", donnees.athletes.item[i].image);//img
 	    $("#ul_athletes li:nth("+i+") a div").addClass(donnees.athletes.item[i].type);//type
-	    //$("#ul_athletes li:nth("+i+") a div").empty();//On vide titre+sous titre
-	    //$("#ul_athletes li:nth("+i+") a div").append(donnees.athletes.item[i].titre+"<p>"+donnees.athletes.item[i].titre+"</p>");//titre+sous titre
+	    $("#ul_athletes li:nth("+i+") a div").empty();//On vide titre+sous titre
+	    $("#ul_athletes li:nth("+i+") a div").append(donnees.athletes.item[i].titre+"<p>"+donnees.athletes.item[i].soustitre+"</p>");//titre+sous titre
+	}
+	
+	//events
+	for(i=0;i<7;i++){
+	    $("#ul_events li:nth("+i+") a").attr("href", donnees.events.item[i].type+".html?id="+donnees.events.item[i].id);//url
+	    $("#ul_events li:nth("+i+") a img").attr("src", donnees.events.item[i].image);//img
+	    $("#ul_events li:nth("+i+") a div").addClass(donnees.events.item[i].type);//type
+	    $("#ul_events li:nth("+i+") a div").empty();//On vide titre+sous titre
+	    $("#ul_events li:nth("+i+") a div").append(donnees.events.item[i].titre+"<p>"+donnees.events.item[i].soustitre+"</p>");//titre+sous titre
+	}
+	
+	//places
+	for(i=0;i<7;i++){
+	    $("#ul_places li:nth("+i+") a").attr("href", donnees.places.item[i].type+".html?id="+donnees.places.item[i].id);//url
+	    $("#ul_places li:nth("+i+") a img").attr("src", donnees.places.item[i].image);//img
+	    $("#ul_places li:nth("+i+") a div").addClass(donnees.places.item[i].type);//type
+	    $("#ul_places li:nth("+i+") a div").empty();//On vide titre+sous titre
+	    $("#ul_places li:nth("+i+") a div").append(donnees.places.item[i].titre+"<p>"+donnees.places.item[i].soustitre+"</p>");//titre+sous titre
 	}
 
 });
