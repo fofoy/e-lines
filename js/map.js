@@ -1,38 +1,20 @@
 
 //DEBUT VIMEO
-// Change this to your username to load in your clips
-var vimeoAlbum = '2172628'; // id de l'album Mountain
 var albums = ['2172780','2172803','2172879'] //gold,louisville,island
-
-// Tell Vimeo what function to call
-var videoCallback = 'latestVideo';
-
-// This function uses oEmbed to get the last clip
-function latestVideo(videos) {
-    for (var i = 0; i < videos.length; i++) {
-        document.getElementById('title_'+videos[i].id).innerHTML = videos[i].title;
-        document.getElementById('thumb_video_small'+(i)).setAttribute('src', videos[i].thumbnail_large);
-    };
-}
-
-// This function loads the data from Vimeo
-function loadScript(url) {
-    var js = document.createElement('script');
-    js.setAttribute('type', 'text/javascript');
-    js.setAttribute('src', url);
-    document.getElementsByTagName('head').item(0).appendChild(js);
-}
+for (var i = 0; i<albums.length;i++) {
+    $.getJSON('http://vimeo.com/api/v2/album/' + albums[i] + '/videos.json?callback=?', {format: "json"}, function(videos) {
+        for (var j = 0; j < videos.length; j++) {
+            console.log(videos[j].title);
+        };
+        console.log(albums[i]);
+    });
+};
 
 
 $(function(){
 
 // Cache les videos de la map
 //$('.small').hide();
-
-for (i = 0; i < albums.length; i++) {
-    var videosUrl = 'http://vimeo.com/api/v2/album/' + albums[i] + '/videos.json?callback=' + videoCallback;
-    loadScript(videosUrl);
-};
 
 // DEBUT GMAP
 //Tableau du style de la map (couleurs)
