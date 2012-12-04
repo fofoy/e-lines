@@ -36,12 +36,10 @@ $(function(){
         var category = (blockBigWidth + blockMidWidth + marginBlocks*4)
         var overview = category * $('.category').length;
         $('.viewport').height(viewport);
-        
         $('.small').height(blockSmallHeight);
         $('.mid').height(blockMidHeight);
         $('.big').height(blockBigHeight);
         $('.small').width(blockSmallWidth);
-        
         $('.mid').width(blockMidWidth);
         $('.big').width(blockBigWidth);
         $('.category').width(category);
