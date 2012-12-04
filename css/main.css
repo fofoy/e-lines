@@ -138,7 +138,7 @@ header nav ul li:nth-of-type(6) a:active, header nav ul li:nth-of-type(6) a.acti
 
 .noSelect { user-select: none; -o-user-select: none; -moz-user-select: none; -khtml-user-select: none; -webkit-user-select: none; }
 
-.category h2 a, .category_video h2 a { display: table; font-family: 'BebasNeueRegular'; font-size: 4.8em; color: #FFF; margin: 0 0 0em 10px; text-decoration: none; }
+.category h2 a, .category_video h2 a { display: table; font-family: 'BebasNeueRegular'; font-size: 4.8em; color: #FFF; margin: 0 0 0 .3rem; text-decoration: none; }
 .category:nth-of-type(2) h2 a { color: #00aeff; }
 .category:nth-of-type(3) h2 a { color: #e72727; }
 .category:nth-of-type(4) h2 a { color: #00a651; }
