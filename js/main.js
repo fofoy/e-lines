@@ -83,4 +83,14 @@ $(function(){
         scrollbar1.tinyscrollbar_update(wcategory*4);
         return false;
     });
+    
+    //Traitement des donnees JSON
+    
+    for(i=0;i<7;i++){
+	    $("#ul_feat li:nth("+i+") a").attr("href", donnees.featured.item[i].type+".html?id="+donnees.featured.item[i].id);//url
+	    $("#ul_feat li:nth("+i+") a img").attr("src", donnees.featured.item[i].image);//img
+	    $("#ul_feat li:nth("+i+") a div").addClass(donnees.featured.item[i].type);//type
+	    $("#ul_feat li:nth("+i+") a div").val(donnees.featured.item[i].titre+"<p>"+donnees.featured.item[i].titre+"</p>");//titre+sous titre
+	}
+
 });
