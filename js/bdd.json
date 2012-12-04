@@ -33,24 +33,24 @@ var donnees = {"featured": {
   },
   "events": {
     "item": [
-      {"id": "20be41c08de2c", "type": "athlete", "titre": "Event Name", "soustitre": "subtitle", "image": ""},
-      {"id": "20be41c08de2c", "type": "athlete", "titre": "WINTER XGAMES EUROPE", "soustitre": "", "image": "img/videos/event_1.jpg"},
-      {"id": "20be41c08e4b8", "type": "athlete", "titre": "Event Name", "soustitre": "", "image": ""},
-      {"id": "20be41c08e4b0", "type": "athlete", "titre": "Event Name", "soustitre": "", "image": ""},
-      {"id": "20be41c08e49a", "type": "athlete", "titre": "Event Name", "soustitre": "", "image": ""},
-      {"id": "20be41c08e4bf", "type": "athlete", "titre": "Event Name", "soustitre": "", "image": ""},
-      {"id": "20be41c08e4a7", "type": "athlete", "titre": "Event Name", "soustitre": "", "image": ""},
+      {"id": "20be41c08de2c", "type": "event", "titre": "Event Name", "soustitre": "subtitle", "image": ""},
+      {"id": "20be41c08de2c", "type": "event", "titre": "WINTER XGAMES EUROPE", "soustitre": "", "image": "img/videos/event_1.jpg"},
+      {"id": "20be41c08e4b8", "type": "event", "titre": "Event Name", "soustitre": "", "image": ""},
+      {"id": "20be41c08e4b0", "type": "event", "titre": "Event Name", "soustitre": "", "image": ""},
+      {"id": "20be41c08e49a", "type": "event", "titre": "Event Name", "soustitre": "", "image": ""},
+      {"id": "20be41c08e4bf", "type": "event", "titre": "Event Name", "soustitre": "", "image": ""},
+      {"id": "20be41c08e4a7", "type": "event", "titre": "Event Name", "soustitre": "", "image": ""},
     ]
   },
   "places": {
     "item": [
-      {"id": "10be41c08de2c", "type": "athlete", "titre": "SEAN PETTIT", "soustitre": "Freeskier", "image": ""},
-      {"id": "10be41c08de2c", "type": "athlete", "titre": "FOCUS ON: Squaw Valley", "soustitre": "Alpine Skiing World Champion", "image": "img/videos/place_1.jpg"},
-      {"id": "10be41c08e4b8", "type": "athlete", "titre": "Place Name", "soustitre": "", "image": ""},
-      {"id": "10be41c08e4b0", "type": "athlete", "titre": "Place Name", "soustitre": "", "image": ""},
-      {"id": "10be41c08e49a", "type": "athlete", "titre": "Place Name", "soustitre": "", "image": ""},
-      {"id": "10be41c08e4bf", "type": "athlete", "titre": "Place Name", "soustitre": "", "image": ""},
-      {"id": "10be41c08e4a7", "type": "athlete", "titre": "Place Name", "soustitre": "", "image": ""},
+      {"id": "10be41c08de2c", "type": "place", "titre": "SEAN PETTIT", "soustitre": "Freeskier", "image": ""},
+      {"id": "10be41c08de2c", "type": "place", "titre": "FOCUS ON: Squaw Valley", "soustitre": "Alpine Skiing World Champion", "image": "img/videos/place_1.jpg"},
+      {"id": "10be41c08e4b8", "type": "place", "titre": "Place Name", "soustitre": "", "image": ""},
+      {"id": "10be41c08e4b0", "type": "place", "titre": "Place Name", "soustitre": "", "image": ""},
+      {"id": "10be41c08e49a", "type": "place", "titre": "Place Name", "soustitre": "", "image": ""},
+      {"id": "10be41c08e4bf", "type": "place", "titre": "Place Name", "soustitre": "", "image": ""},
+      {"id": "10be41c08e4a7", "type": "place", "titre": "Place Name", "soustitre": "", "image": ""},
     ]
   }
 };
