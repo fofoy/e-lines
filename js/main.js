@@ -86,11 +86,31 @@ $(function(){
     
     //Traitement des donnees JSON
     
+    //featured
     for(i=0;i<7;i++){
 	    $("#ul_feat li:nth("+i+") a").attr("href", donnees.featured.item[i].type+".html?id="+donnees.featured.item[i].id);//url
 	    $("#ul_feat li:nth("+i+") a img").attr("src", donnees.featured.item[i].image);//img
 	    $("#ul_feat li:nth("+i+") a div").addClass(donnees.featured.item[i].type);//type
-	    $("#ul_feat li:nth("+i+") a div").val(donnees.featured.item[i].titre+"<p>"+donnees.featured.item[i].titre+"</p>");//titre+sous titre
+	    $("#ul_feat li:nth("+i+") a div").empty();//On vide titre+sous titre
+	    $("#ul_feat li:nth("+i+") a div").append(donnees.featured.item[i].titre+"<p>"+donnees.featured.item[i].soustitre+"</p>");//titre+sous titre
+	}
+	
+	//videos
+    for(i=0;i<7;i++){
+	    $("#ul_videos li:nth("+i+") a").attr("href", donnees.videos.item[i].type+".html?id="+donnees.videos.item[i].id);//url
+	    $("#ul_videos li:nth("+i+") a img").attr("src", donnees.videos.item[i].image);//img
+	    $("#ul_videos li:nth("+i+") a div").addClass(donnees.videos.item[i].type);//type
+	    //$("#ul_videos li:nth("+i+") a div").empty();//On vide titre+sous titre
+	    //$("#ul_videos li:nth("+i+") a div").append(donnees.videos.item[i].titre+"<p>"+donnees.videos.item[i].titre+"</p>");//titre+sous titre
+	}
+	
+	//athletes
+	for(i=0;i<7;i++){
+	    $("#ul_athletes li:nth("+i+") a").attr("href", donnees.athletes.item[i].type+".html?id="+donnees.athletes.item[i].id);//url
+	    $("#ul_athletes li:nth("+i+") a img").attr("src", donnees.athletes.item[i].image);//img
+	    $("#ul_athletes li:nth("+i+") a div").addClass(donnees.athletes.item[i].type);//type
+	    //$("#ul_athletes li:nth("+i+") a div").empty();//On vide titre+sous titre
+	    //$("#ul_athletes li:nth("+i+") a div").append(donnees.athletes.item[i].titre+"<p>"+donnees.athletes.item[i].titre+"</p>");//titre+sous titre
 	}
 
 });

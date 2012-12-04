@@ -4,9 +4,31 @@ var donnees = {"featured": {
       {"id": "50be41c08de2c", "type": "video", "titre": "Video Title 1", "soustitre": "Subtitle 1", "image": "img/montagne/ski/michelle_parker/cCwbnYgL64Q_michelle_parker_retallack.jpeg"},
       {"id": "50be41c08e4b8", "type": "event", "titre": "Winter Xgame", "soustitre": "20th - 22nd March 2013", "image": ""},
       {"id": "50be41c08e4b0", "type": "place", "titre": "Place", "soustitre": "", "image": ""},
-      {"id": "50be41c08e49a", "type": "athlete", "titre": "Michelle Parker", "soustitre": "My ride", "image": "img/montagne/ski/michelle_parker/portrait_small.jpg"},
-      {"id": "50be41c08e4bf", "type": "video", "titre": "Video Title 6", "soustitre": "Subtitle 6", "image": ""},
+      {"id": "50be41c08e49a", "type": "athlete", "titre": "Michelle Parker", "soustitre": "", "image": "img/montagne/ski/michelle_parker/portrait_small.jpg"},
+      {"id": "50be41c08e4bf", "type": "video", "titre": "Video Title 6", "soustitre": "", "image": ""},
       {"id": "50be41c08e4a7", "type": "event", "titre": "Winter Xgames", "soustitre": "", "image": "img/w_xgames_small.jpg"},
+    ]
+  },
+  "videos": {
+    "item": [
+      {"id": "40be41c08de2c", "type": "video", "titre": "BERND ZANGERL", "soustitre": "Climbing", "image": ""},
+      {"id": "40be41c08de2c", "type": "video", "titre": "SNOWBOARDING PERFORMANCE CAMP", "soustitre": "Red Bull", "image": ""},
+      {"id": "40be41c08e4b8", "type": "video", "titre": "Video Name", "soustitre": "", "image": ""},
+      {"id": "40be41c08e4b0", "type": "video", "titre": "Video Name", "soustitre": "", "image": ""},
+      {"id": "40be41c08e49a", "type": "video", "titre": "Video Name Name", "soustitre": "", "image": ""},
+      {"id": "40be41c08e4bf", "type": "video", "titre": "Video Name Name", "soustitre": "", "image": ""},
+      {"id": "40be41c08e4a7", "type": "video", "titre": "Video Name Name", "soustitre": "", "image": ""},
+    ]
+  },
+  "athletes": {
+    "item": [
+      {"id": "30be41c08de2c", "type": "athlete", "titre": "SEAN PETTIT", "soustitre": "Freeskier", "image": "img/montagne/ski/sean_pettit/pettit_mid.jpg"},
+      {"id": "30be41c08de2c", "type": "athlete", "titre": "LINDSEY VONN", "soustitre": "Alpine Skiing World Champion", "image": "img/montagne/ski/lindsey_vonn/vonn_big.jpg"},
+      {"id": "30be41c08e4b8", "type": "athlete", "titre": "Athlete Name", "soustitre": "", "image": ""},
+      {"id": "30be41c08e4b0", "type": "athlete", "titre": "Athlete Name", "soustitre": "", "image": ""},
+      {"id": "30be41c08e49a", "type": "athlete", "titre": "Athlete Name", "soustitre": "", "image": ""},
+      {"id": "30be41c08e4bf", "type": "athlete", "titre": "Athlete Name", "soustitre": "", "image": ""},
+      {"id": "30be41c08e4a7", "type": "athlete", "titre": "Athlete Name", "soustitre": "", "image": ""},
     ]
   }
 };
