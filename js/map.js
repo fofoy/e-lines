@@ -1,45 +1,5 @@
-
-//DEBUT VIMEO
-
-var albums = ['2172780','2172803','2172879'] //gold,louisville,island
-var videos_a =[];
-for (var i = 0; i<albums.length;i++) {
-    $.getJSON('http://vimeo.com/api/v2/album/' + albums[i] + '/videos.json?callback=?', {format: "json"}, function(videos) {
-        for (var j = 0; j < videos.length; j++) {
-            console.log(videos[j].id+' '+albums[0]);
-        };
-    });
-};
-
-
-
 $(function(){
 
-// Cache les videos de la map
-//$('.small').hide();
-/*
-for (var i = 0; i<albums.length;i++) {
-    var ul = document.getElementById('liste_video');
-
-    var li = document.createElement('li');
-    li.setAttribute('class', 'small '+albums[i]);
-    ul.appendChild(li);
-
-    var a = document.createElement('a');
-    a.setAttribute('href', 'd');
-    li.appendChild(a);
-
-    var img = document.createElement('img');
-    img.setAttribute('src', 'dd');
-    img.setAttribute('alt', 'videos[j].tit');
-    a.appendChild(img);
-
-    var div = document.createElement('div');
-    div.setAttribute('class', 'video');
-    div.innerHTML = 'videos[j].title';
-    a.appendChild(div);
-};
-*/
 // DEBUT GMAP
 //Tableau du style de la map (couleurs)
 var styles = [
@@ -96,7 +56,7 @@ map.mapTypes.set('map_style', styledMap); // Application du style
 map.setMapTypeId('map_style');
 
 //Tableau des markers
-var locs = [ ["-28.0172605", "153.4256987", "Gold Coast", "content", ".2172780","4"], ["38.2567969", "-85.7408659", "Louisville Extreme Park", "content2", ".2172803","4"], ["51.086126", "-2.210767", "island", "content3", ".2172879","3"]];
+var locs = [ ["-28.0172605", "153.4256987", "Gold Coast", "content", "2172780","4"], ["38.2567969", "-85.7408659", "Louisville Extreme Park", "content2", "2172803","4"], ["51.086126", "-2.210767", "island", "content3", "2172879","3"]];
 var image = 'img/pin.png';
 
 //Ajout des markers
@@ -114,6 +74,34 @@ function createMarker(i) {
         icon: image
     });
 
+    //Importation des vidéo en rapport avec le lieu
+    $.getJSON('http://vimeo.com/api/v2/album/' + locs[i][4] + '/videos.json?callback=?', {format: "json"}, function(videos) {
+        for (var j = 0; j < videos.length; j++) {
+        console.log(videos[j].title+'  '+locs[i][4]);
+
+        var ul = document.getElementById('liste_video');
+    
+        var li = document.createElement('li');
+        li.setAttribute('class', 'small '+locs[i][4]);
+        ul.appendChild(li);
+    
+        var a = document.createElement('a');
+        a.setAttribute('href', '');
+        li.appendChild(a);
+    
+        var img = document.createElement('img');
+        img.setAttribute('src', videos[j].thumbnail_large);
+        img.setAttribute('alt', videos[j].title);
+        a.appendChild(img);
+    
+        var div = document.createElement('div');
+        div.setAttribute('class', 'video');
+        div.innerHTML = videos[j].title;
+        a.appendChild(div);
+
+        };
+    });
+
     //Options cercles
     var videoOptions = {
         strokeColor: "#156ddb",
@@ -129,12 +117,16 @@ function createMarker(i) {
 
     //var infowindow = new google.maps.InfoWindow({content: locs[i][3]});
     google.maps.event.addListener(marker, 'click', function() {
+
         map.panTo(marker.getPosition());
         for (var j = 0; j < locs.length; j++) {
-            $(locs[j][4]).hide(); // cache les video active
+            $('.small').hide(); // cache les video active
         }
-            $(locs[i][4]).slideToggle(); // affiche les video du marker
+            $('.'+locs[i][4]).slideToggle(); // affiche les video du marker
         });
 } // Fin createMarker
+
+// Cache les videos de la map
+//$('.small').hide();
 
 });
