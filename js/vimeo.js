@@ -1,4 +1,3 @@
-
 function getID(){
         var regexS = "[\\?&]id=([^&#]*)";
         var regex = new RegExp(regexS);
@@ -11,24 +10,54 @@ function getID(){
         }
     }
 
+var vimeoUsername;
 var id_video = getID();
-var apiEndpoint = 'http://vimeo.com/api/v2/';
-var oEmbedEndpoint = 'http://vimeo.com/api/oembed.json'
-var oEmbedCallback = 'switchVideo';
-var videosCallback = 'setupGallery';
-var vimeoUsername = 'brad';
+var url_video = 'http://vimeo.com/' + id_video;
+$.getJSON('http://vimeo.com/api/v2/video/' + id_video + '.json?callback=?', {format: "json"}, function(videos) {
+    vimeoUsername = videos[0].user_id;
+});
 
 $(document).ready(function() {
-            $.getScript(apiEndpoint + vimeoUsername + '/videos.json?callback=' + videosCallback);
+            getVideo(url_video);
+            $.getScript('http://vimeo.com/api/v2/' + vimeoUsername + '/videos.json?callback=setupGallery');
         });
 
         function getVideo(url) {
-            $.getScript(oEmbedEndpoint + '?url=http://vimeo.com/' + id_video + '&width=504&height=280&callback=' + oEmbedCallback);
+            $.getScript('http://vimeo.com/api/oembed.json?url=' + url + '&autoplay=0&callback=switchVideo');
         }
 
         function setupGallery(videos) {
-            // Load the first video
-            getVideo(videos[0].url);
+
+            // Add the videos to the gallery
+            for (var j = 0; j < 4; j++) {
+                var ul = document.getElementById('liste_video');
+    
+                var li = document.createElement('li');
+                li.setAttribute('class', 'small');
+                ul.appendChild(li);
+            
+                var a = document.createElement('a');
+                a.setAttribute('href', videos[j].url);
+                li.appendChild(a);
+            
+                var img = document.createElement('img');
+                img.setAttribute('src', videos[j].thumbnail_large);
+                img.setAttribute('alt', videos[j].title);
+                a.appendChild(img);
+            
+                var div = document.createElement('div');
+                div.setAttribute('class', 'video');
+                div.innerHTML = videos[j].title;
+                a.appendChild(div);
+            }
+
+            // Switch to the video when a thumbnail is clicked
+            $('#liste_video li a').click(function(event) {
+                event.preventDefault();
+                getVideo(this.href);
+                return false;
+            });
+
         }
 
         function switchVideo(video) {
