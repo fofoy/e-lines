@@ -12,6 +12,7 @@ var videosUrl = 'http://vimeo.com/api/v2/album/' + vimeoAlbum + '/videos.json?ca
 function latestVideo(videos) {
     for (var i = 0; i < 7; i++) {
       document.getElementById('title_video_small'+(i)).innerHTML = videos[i].title;
+      document.getElementById('link_video_small'+(i)).setAttribute('id', videos[i].id);
       document.getElementById('thumb_video_small'+(i)).setAttribute('src', videos[i].thumbnail_large);
     };
 }
@@ -27,7 +28,5 @@ function loadScript(url) {
 
 
 $(function(){
-	
 	loadScript(videosUrl);
-
 });
