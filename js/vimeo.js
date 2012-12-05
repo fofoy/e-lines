@@ -15,6 +15,7 @@ var id_video = getID();
 var url_video = 'http://vimeo.com/' + id_video;
 $.getJSON('http://vimeo.com/api/v2/video/' + id_video + '.json?callback=?', {format: "json"}, function(videos) {
     vimeoUsername = videos[0].user_id;
+    $('#title_video_big').html(videos[0].title);
 });
 
 $(document).ready(function() {
@@ -23,7 +24,7 @@ $(document).ready(function() {
         });
 
         function getVideo(url) {
-            $.getScript('http://vimeo.com/api/oembed.json?url=' + url + '&autoplay=0&callback=switchVideo');
+            $.getScript('http://vimeo.com/api/oembed.json?url=' + url + '&autoplay=0&portrait=0&title=0&byline=0&callback=switchVideo');
         }
 
         function setupGallery(videos) {
@@ -55,6 +56,14 @@ $(document).ready(function() {
             $('#liste_video li a').click(function(event) {
                 event.preventDefault();
                 getVideo(this.href);
+                var url = this.href.split('/')[3];
+                console.log(url);
+                $.getJSON('http://vimeo.com/api/v2/video/' + url + '.json?callback=?', {format: "json"}, function(videos) {
+                    $('#title_video_big').html(videos[0].title);
+                    $('meta[property=og\\:title]').attr('content', videos[0].title + ' on e-Lines');
+                    $('meta[property=og\\:url]').attr('content', '');
+                    $('meta[property=og\\:image]').attr('content', '');
+                });
                 return false;
             });
 
