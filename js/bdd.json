@@ -1,11 +1,11 @@
 var donnees = {
     "item": [
       {"id": "50be41c08de2c", "type": "athlete", "titre": "Gretchen Bleiler", "soustitre": "Snowboarder", "image": "img/montagne/snowboard/gretchen_bleiler/portrait_mid.jpg"},
-      {"id": "50be41c08de2c", "type": "video", "titre": "Video Title 1", "soustitre": "Subtitle 1", "image": "img/montagne/ski/michelle_parker/cCwbnYgL64Q_michelle_parker_retallack.jpeg"},
+      {"id": "50be41c08de2c", "type": "video", "titre": "", "soustitre": "", "image": ""},
       {"id": "50be41c08e4b8", "type": "event", "titre": "Winter Xgame", "soustitre": "20th - 22nd March 2013", "image": ""},
       {"id": "50be41c08e4b0", "type": "place", "titre": "Place", "soustitre": "", "image": ""},
       {"id": "50be41c08e49a", "type": "athlete", "titre": "Michelle Parker", "soustitre": "", "image": "img/montagne/ski/michelle_parker/portrait_small.jpg"},
-      {"id": "50be41c08e4bf", "type": "video", "titre": "Video Title 6", "soustitre": "", "image": ""},
+      {"id": "50be41c08e4bf", "type": "video", "titre": "", "soustitre": "", "image": ""},
       {"id": "50be41c08e4a7", "type": "event", "titre": "Winter Xgames", "soustitre": "", "image": "img/w_xgames_small.jpg"},
 
       {"id": "40be41c08de2c", "type": "video", "titre": "", "soustitre": "", "image": ""},
