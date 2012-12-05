@@ -14,8 +14,11 @@ function latestVideo(videos) {
       document.getElementById('title_video_small'+(i)).innerHTML = videos[i].title;
       document.getElementById('link_video_small'+(i)).setAttribute('id', videos[i].id);
       document.getElementById('thumb_video_small'+(i)).setAttribute('src', videos[i].thumbnail_large);
-      $("#ul_videos li:nth("+i+") a").attr("href", "video.html?id="+videos[i].id);//regénération des url avec les id vimeo
-      $("#ul_videos li:nth("+i+") a img").attr("alt", videos[i].title);//alt
+      $("#main div.category:nth(1) ul li:nth("+i+") a").attr("href", "video.html?id="+videos[i].id);//regénération des url avec les id vimeo
+      $("#main div.category:nth(1) ul li:nth("+i+") a img").attr("alt", videos[i].title);//alt
+
+      //donnees.item[7+i].id=videos[i].id;
+      //donnees.item[7+i].titre=videos[i].title;
     };
 }
 
