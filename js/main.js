@@ -97,5 +97,23 @@ $(function(){
     	}
 	}
 
-
+    //Search
+        // détection de la saisie dans le champ de recherche
+        $("#search_area form").submit( function(event){
+            var hasRes = false;
+            $("#res_search").empty();//On nettoye la liste avant d'écrire des résultats
+            $field = $("#q");
+            $.each(donnees.item, function() {
+                if(this.titre.toLowerCase().indexOf($field.val().toLowerCase())!=-1||this.soustitre.toLowerCase().indexOf($field.val().toLowerCase())!=-1){
+                    if($("#s_"+this.type).hasClass('selected')){
+                        $("#res_search").append("<li><span class='"+this.type+"'></span>"+this.titre+"</li>")
+                        hasRes = true;
+                    }
+                }
+            });
+            if(!hasRes){
+                $("#res_search").append("<li>No result found.</li>")
+            }
+            event.preventDefault();
+        });
 });

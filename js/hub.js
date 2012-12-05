@@ -12,26 +12,4 @@ for(j=0;j<5;j++){
 	}
 }
 
-//Search
-    // détection de la saisie dans le champ de recherche
-    $('#q').keyup( function(){
-    	$("#res_search").empty();//On nettoye la liste avant d'écrire des résultats
-        $field = $(this);
- 		
-        // on commence à traiter à partir du 2ème caractère saisi
-        if( $field.val().length > 1 )
-        {
-            $.each(donnees.item, function() {
-				if(this.titre.toLowerCase().indexOf($field.val().toLowerCase())!=-1||this.soustitre.toLowerCase().indexOf($field.val().toLowerCase())!=-1){
-					if($("#s_"+this.type).addClass('selected')){
-						$("#res_search").append("<li><span class='"+this.type+"'></span>"+this.titre+"</li>")
-					}
-				}
-			});
-        }       
-    });
-
-    
-
-
 });

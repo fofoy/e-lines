@@ -17,8 +17,9 @@ function latestVideo(videos) {
       $("#main div.category:nth(1) ul li:nth("+i+") a").attr("href", "video.html?id="+videos[i].id);//regénération des url avec les id vimeo
       $("#main div.category:nth(1) ul li:nth("+i+") a img").attr("alt", videos[i].title);//alt
 
-      //donnees.item[7+i].id=videos[i].id;
-      //donnees.item[7+i].titre=videos[i].title;
+      //Mise à jour dynamique du JSON pour la fonction de recherche
+      donnees.item[7+i].id=videos[i].id; 
+      donnees.item[7+i].titre=videos[i].title;
     };
 }
 
