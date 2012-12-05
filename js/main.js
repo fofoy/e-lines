@@ -96,4 +96,5 @@ $(function(){
     	return decodeURIComponent(results[1].replace(/\+/g, " "));
     	}
 	}
+
 });

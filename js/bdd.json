@@ -1,4 +1,4 @@
-var donnees = {"featured": {
+var donnees = {
     "item": [
       {"id": "50be41c08de2c", "type": "athlete", "titre": "Gretchen Bleiler", "soustitre": "Snowboarder", "image": "img/montagne/snowboard/gretchen_bleiler/portrait_mid.jpg"},
       {"id": "50be41c08de2c", "type": "video", "titre": "Video Title 1", "soustitre": "Subtitle 1", "image": "img/montagne/ski/michelle_parker/cCwbnYgL64Q_michelle_parker_retallack.jpeg"},
@@ -7,21 +7,15 @@ var donnees = {"featured": {
       {"id": "50be41c08e49a", "type": "athlete", "titre": "Michelle Parker", "soustitre": "", "image": "img/montagne/ski/michelle_parker/portrait_small.jpg"},
       {"id": "50be41c08e4bf", "type": "video", "titre": "Video Title 6", "soustitre": "", "image": ""},
       {"id": "50be41c08e4a7", "type": "event", "titre": "Winter Xgames", "soustitre": "", "image": "img/w_xgames_small.jpg"},
-    ]
-  },
-  "videos": {
-    "item": [
-      {"id": "40be41c08de2c", "type": "video", "titre": "BERND ZANGERL", "soustitre": "Climbing", "image": ""},
-      {"id": "40be41c08de2c", "type": "video", "titre": "SNOWBOARDING PERFORMANCE CAMP", "soustitre": "Red Bull", "image": ""},
-      {"id": "40be41c08e4b8", "type": "video", "titre": "Video Name", "soustitre": "", "image": ""},
-      {"id": "40be41c08e4b0", "type": "video", "titre": "Video Name", "soustitre": "", "image": ""},
-      {"id": "40be41c08e49a", "type": "video", "titre": "Video Name Name", "soustitre": "", "image": ""},
-      {"id": "40be41c08e4bf", "type": "video", "titre": "Video Name Name", "soustitre": "", "image": ""},
-      {"id": "40be41c08e4a7", "type": "video", "titre": "Video Name Name", "soustitre": "", "image": ""},
-    ]
-  },
-  "athletes": {
-    "item": [
+
+      {"id": "40be41c08de2c", "type": "video", "titre": "", "soustitre": "", "image": ""},
+      {"id": "40be41c08de2c", "type": "video", "titre": "", "soustitre": "", "image": ""},
+      {"id": "40be41c08e4b8", "type": "video", "titre": "", "soustitre": "", "image": ""},
+      {"id": "40be41c08e4b0", "type": "video", "titre": "", "soustitre": "", "image": ""},
+      {"id": "40be41c08e49a", "type": "video", "titre": "", "soustitre": "", "image": ""},
+      {"id": "40be41c08e4bf", "type": "video", "titre": "", "soustitre": "", "image": ""},
+      {"id": "40be41c08e4a7", "type": "video", "titre": "", "soustitre": "", "image": ""},
+
       {"id": "30be41c08de2c", "type": "athlete", "titre": "SEAN PETTIT", "soustitre": "Freeskier", "image": "img/montagne/ski/sean_pettit/pettit_mid.jpg"},
       {"id": "30be41c08de2c", "type": "athlete", "titre": "LINDSEY VONN", "soustitre": "Alpine Skiing World Champion", "image": "img/montagne/ski/lindsey_vonn/vonn_big.jpg"},
       {"id": "30be41c08e4b8", "type": "athlete", "titre": "Athlete Name", "soustitre": "", "image": ""},
@@ -29,10 +23,7 @@ var donnees = {"featured": {
       {"id": "30be41c08e49a", "type": "athlete", "titre": "Athlete Name", "soustitre": "", "image": ""},
       {"id": "30be41c08e4bf", "type": "athlete", "titre": "Athlete Name", "soustitre": "", "image": ""},
       {"id": "30be41c08e4a7", "type": "athlete", "titre": "Athlete Name", "soustitre": "", "image": ""},
-    ]
-  },
-  "events": {
-    "item": [
+
       {"id": "20be41c08de2c", "type": "event", "titre": "Event Name", "soustitre": "subtitle", "image": ""},
       {"id": "20be41c08de2c", "type": "event", "titre": "WINTER XGAMES EUROPE", "soustitre": "", "image": "img/videos/event_1.jpg"},
       {"id": "20be41c08e4b8", "type": "event", "titre": "Event Name", "soustitre": "", "image": ""},
@@ -40,10 +31,7 @@ var donnees = {"featured": {
       {"id": "20be41c08e49a", "type": "event", "titre": "Event Name", "soustitre": "", "image": ""},
       {"id": "20be41c08e4bf", "type": "event", "titre": "Event Name", "soustitre": "", "image": ""},
       {"id": "20be41c08e4a7", "type": "event", "titre": "Event Name", "soustitre": "", "image": ""},
-    ]
-  },
-  "places": {
-    "item": [
+
       {"id": "10be41c08de2c", "type": "place", "titre": "SEAN PETTIT", "soustitre": "Freeskier", "image": ""},
       {"id": "10be41c08de2c", "type": "place", "titre": "FOCUS ON: Squaw Valley", "soustitre": "Alpine Skiing World Champion", "image": "img/videos/place_1.jpg"},
       {"id": "10be41c08e4b8", "type": "place", "titre": "Place Name", "soustitre": "", "image": ""},
@@ -52,5 +40,4 @@ var donnees = {"featured": {
       {"id": "10be41c08e4bf", "type": "place", "titre": "Place Name", "soustitre": "", "image": ""},
       {"id": "10be41c08e4a7", "type": "place", "titre": "Place Name", "soustitre": "", "image": ""},
     ]
-  }
 };
