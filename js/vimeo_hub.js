@@ -14,6 +14,7 @@ function latestVideo(videos) {
       document.getElementById('title_video_small'+(i)).innerHTML = videos[i].title;
       document.getElementById('link_video_small'+(i)).setAttribute('id', videos[i].id);
       document.getElementById('thumb_video_small'+(i)).setAttribute('src', videos[i].thumbnail_large);
+      $("#ul_videos li:nth("+i+") a").attr("href", "video.html?id="+videos[i].id);//regénération des url avec les id vimeo
     };
 }
 
