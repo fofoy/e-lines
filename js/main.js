@@ -27,7 +27,7 @@ $(function(){
         var h2Height = $('h2').height();
         var viewport = (windowHeight - headerHeight - marginContent*2);
         var content = viewport - h2Height;
-        var blockSmallHeight = (content - marginBlocks*12)/4;
+        var blockSmallHeight = (content - marginBlocks*6)/4;
         var blockMidHeight = (blockSmallHeight*2 + marginBlocks*2);
         var blockBigHeight = (blockMidHeight);
         var blockBigWidth = Math.floor(blockBigHeight*ratio);
@@ -45,10 +45,12 @@ $(function(){
         $('.category').width(category);
         $('.overview').width(overview);
         if ($('.big_video').length > 0){
-            $('.big_video').height(content - marginBlocks*2 - h2Height);
-            $('.big_video').width($('.big_video').height() * 16/9 ); /* Temp */
-            $('.video_content .small').height((content - marginBlocks*17)/4); /* Temp */
-            $('.overview').width($('.big_video').width() + blockSmallWidth + marginContent); /* Temp */
+            var videoWidth = content * ratio;
+            $('.big_video').height(content);
+            $('.big_video #embed iframe').height(content);
+            $('.big_video').width(videoWidth);
+            $('.big_video #embed iframe').width(videoWidth);
+            $('.overview').width(videoWidth + blockSmallWidth + marginBlocks*4);
         }
         
 
