@@ -27,7 +27,7 @@ $(function(){
         var h2Height = $('h2').height();
         var viewport = (windowHeight - headerHeight - marginContent*2);
         var content = viewport - h2Height;
-        var blockSmallHeight = (content - marginBlocks*6)/4;
+        var blockSmallHeight = (content - marginBlocks*8)/4;
         var blockMidHeight = (blockSmallHeight*2 + marginBlocks*2);
         var blockBigHeight = (blockMidHeight);
         var blockBigWidth = Math.floor(blockBigHeight*ratio);
@@ -44,6 +44,7 @@ $(function(){
         $('.big').width(blockBigWidth);
         $('.category').width(category);
         $('.overview').width(overview);
+
         if ($('.big_video').length > 0){
             var videoWidth = content * ratio;
             $('.big_video').height(content);
@@ -52,8 +53,10 @@ $(function(){
             $('.big_video #embed iframe').width(videoWidth);
             $('.overview').width(videoWidth + blockSmallWidth + marginBlocks*4);
         }
-        
 
+        var categoryFullWidth = $('.category_full_content li').length;
+        if (categoryFullWidth%2!=0) {categoryFullWidth = categoryFullWidth+2}
+        $('.category_full_content').width(categoryFullWidth/2*blockMidWidth)
     }
 
     //Scrollbar
