@@ -97,6 +97,10 @@ function createMarker(i) {
         div.innerHTML = videos[j].title;
         a.appendChild(div);
 
+        //Reecriture des url des vidéos liées
+        $("#liste_video li:nth("+j+") a").attr("href", "video.html?id="+videos[j].id);//regénération des url avec les id vimeo
+        $("#liste_video li:nth("+j+") a img").attr("alt", videos[j].title);//alt
+
         };
     });
 
