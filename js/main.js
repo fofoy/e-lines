@@ -106,7 +106,7 @@ $(function(){
             $.each(donnees.item, function() {
                 if(this.titre.toLowerCase().indexOf($field.val().toLowerCase())!=-1||this.soustitre.toLowerCase().indexOf($field.val().toLowerCase())!=-1){
                     if($("#s_"+this.type).hasClass('selected')){
-                        $("#res_search").append("<li><span class='"+this.type+"'></span>"+this.titre+"</li>")
+                        $("#res_search").append("<li><a href="+this.href+"><span class='"+this.type+"'></span>"+this.titre.toLowerCase()+"</a></li>")
                         hasRes = true;
                     }
                 }
