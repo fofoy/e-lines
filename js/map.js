@@ -77,8 +77,6 @@ function createMarker(i) {
     //Importation des vidéo en rapport avec le lieu
     $.getJSON('http://vimeo.com/api/v2/album/' + locs[i][4] + '/videos.json?callback=?', {format: "json"}, function(videos) {
         for (var j = 0; j < videos.length; j++) {
-        console.log(videos[j].title+'  '+locs[i][4]);
-
         var ul = document.getElementById('liste_video');
     
         var li = document.createElement('li');
