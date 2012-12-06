@@ -35,21 +35,69 @@ header h1::before { content: url('img/sprite_universes.png'); margin-right: .2em
     HOME
 **/
 
+@-webkit-keyframes textAnim{ from{ left: -260px; opacity: 0;} to { left: 0; opacity: 1;} } 
+   @-moz-keyframes textAnim{ from{ left: -260px; opacity: 0;} to { left: 0; opacity: 1;} } 
+    @-ms-keyframes textAnim{ from{ left: -260px; opacity: 0;} to { left: 0; opacity: 1;} } 
+     @-o-keyframes textAnim{ from{ left: -260px; opacity: 0;} to { left: 0; opacity: 1;} } 
+        @keyframes textAnim{ from{ left: -260px; opacity: 0;} to { left: 0; opacity: 1;} } 
+
+@-webkit-keyframes iconAnim{ from{ width: 50px; height: 50px; background-size: 50px; margin: 100px; opacity: 0;} to { width:250px; height:250px; margin: 0; opacity: 1;} } 
+   @-moz-keyframes iconAnim{ from{ width: 50px; height: 50px; background-size: 50px; margin: 100px; opacity: 0;} to { width:250px; height:250px; margin: 0; opacity: 1;} } 
+    @-ms-keyframes iconAnim{ from{ width: 50px; height: 50px; background-size: 50px; margin: 100px; opacity: 0;} to { width:250px; height:250px; margin: 0; opacity: 1;} } 
+     @-o-keyframes iconAnim{ from{ width: 50px; height: 50px; background-size: 50px; margin: 100px; opacity: 0;} to { width:250px; height:250px; margin: 0; opacity: 1;} } 
+        @keyframes iconAnim{ from{ width: 50px; height: 50px; background-size: 50px; margin: 100px; opacity: 0;} to { width:250px; height:250px; margin: 0; opacity: 1;} } 
+
 #head_home { padding-left:0px; }
-#head_home img { display:block; margin:0 auto; }
+#head_home img { display:block; margin:0 auto; width: 385px;}
 
 #choice {margin:0 auto; margin-top:4%; width:520px; height:520px;}
 #choice ul li {width:250px;height:250px;margin:5px;float:left;}
-#choice ul li a {width:250px;height:250px;display:block; -webkit-transition: all .5s ease-in-out; -moz-transition: all .5s ease-in-out; -ms-transition: all .5s ease-in-out; -o-transition: all .5s ease-in-out; transition: all .5s ease-in-out;}
+#choice ul li a {outline: rgba(127, 127, 127, .0) solid 2px; width:250px;height:250px;display:block; -webkit-transition: all .5s ease-in-out; -moz-transition: all .5s ease-in-out; -ms-transition: all .5s ease-in-out; -o-transition: all .5s ease-in-out; transition: all .5s ease-in-out;}
 #choice ul li a:hover {outline: rgba(127, 127, 127, .5) solid 2px;-webkit-transition: all .5s ease-in-out; -moz-transition: all .5s ease-in-out; -ms-transition: all .5s ease-in-out; -o-transition: all .5s ease-in-out; transition: all .5s ease-in-out;}
 #choice ul li a:active{outline: rgba(127, 127, 127, .5) solid 2px;-webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none; transition: none;}
-#choice ul li:nth-of-type(2) a {background: url('img/univ_montagne.png') no-repeat;} 
-#choice ul li:nth-of-type(3) a {background: url('img/univ_mer.png') no-repeat;} 
-#choice ul li:nth-of-type(4) a {background: url('img/univ_urbain.png') no-repeat;} 
+#choice ul li:nth-of-type(1) {
+    position: relative;
+        -webkit-animation: textAnim .75s ease-in-out;
+           -moz-animation: textAnim .75s ease-in-out;
+            -ms-animation: textAnim .75s ease-in-out;
+             -o-animation: textAnim .75s ease-in-out;
+                animation: textAnim .75s ease-in-out;
+}
+#choice ul li:nth-of-type(2) a {
+        -webkit-animation: iconAnim 1s ease-in-out .75s forwards;
+           -moz-animation: iconAnim 1s ease-in-out .75s forwards;
+            -ms-animation: iconAnim 1s ease-in-out .75s forwards;
+             -o-animation: iconAnim 1s ease-in-out .75s forwards;
+                animation: iconAnim 1s ease-in-out .75s forwards;
+                background: url('img/univ_montagne.png') no-repeat center;
+                background-size: 250px;
+                opacity: 0;
+}
 
-#choice ul li:nth-of-type(2) a:hover {background: url('img/univ_montagne_hover.png') no-repeat;} 
-#choice ul li:nth-of-type(3) a:hover {background: url('img/univ_mer_hover.png') no-repeat;} 
-#choice ul li:nth-of-type(4) a:hover {background: url('img/univ_urbain_hover.png') no-repeat;} 
+#choice ul li:nth-of-type(3) a {
+        -webkit-animation: iconAnim 1s ease-in-out 1.5s forwards;
+           -moz-animation: iconAnim 1s ease-in-out 1.5s forwards;
+            -ms-animation: iconAnim 1s ease-in-out 1.5s forwards;
+             -o-animation: iconAnim 1s ease-in-out 1.5s forwards;
+                animation: iconAnim 1s ease-in-out 1.5s forwards;
+                background: url('img/univ_mer.png') no-repeat center;
+                background-size: 250px;
+                opacity: 0;
+} 
+#choice ul li:nth-of-type(4) a {
+        -webkit-animation: iconAnim 1s ease-in-out 2.25s forwards;
+           -moz-animation: iconAnim 1s ease-in-out 2.25s forwards;
+            -ms-animation: iconAnim 1s ease-in-out 2.25s forwards;
+             -o-animation: iconAnim 1s ease-in-out 2.25s forwards;
+                animation: iconAnim 1s ease-in-out 2.25s forwards;
+                background: url('img/univ_urbain.png') no-repeat center; 
+                background-size: 250px;
+                opacity: 0;
+} 
+
+#choice ul li:nth-of-type(2) a:hover {background: url('img/univ_montagne_hover.png') no-repeat; background-size: 250px;} 
+#choice ul li:nth-of-type(3) a:hover {background: url('img/univ_mer_hover.png') no-repeat; background-size: 250px;} 
+#choice ul li:nth-of-type(4) a:hover {background: url('img/univ_urbain_hover.png') no-repeat; background-size: 250px;} 
 
 #choice ul li p {
     font-family: 'BebasNeueRegular';
