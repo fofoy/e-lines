@@ -56,7 +56,7 @@ map.mapTypes.set('map_style', styledMap); // Application du style
 map.setMapTypeId('map_style');
 
 //Tableau des markers
-var locs = [ ["-28.0172605", "153.4256987", "Gold Coast", "content", "2172780","4"], ["38.2567969", "-85.7408659", "Louisville Extreme Park", "content2", "2172803","4"], ["51.086126", "-2.210767", "island", "content3", "2172879","3"]];
+var locs = [ ["-28.0172605", "153.4256987", "Gold Coast", "content", "2172780","4"], ["38.2567969", "-85.7408659", "Louisville Extreme Park", "content2", "2172803","4"], ["-1.426001", "98.9245343", "Mentawais Island", "content3", "2172879","3"]];
 var image = 'img/pin.png';
 
 //Ajout des markers
@@ -117,7 +117,7 @@ function createMarker(i) {
 
     //var infowindow = new google.maps.InfoWindow({content: locs[i][3]});
     google.maps.event.addListener(marker, 'click', function() {
-
+        document.getElementById('title_marker').innerHTML = ' > ' + locs[i][2]; // Ajout du nom du lieu
         map.panTo(marker.getPosition());
         for (var j = 0; j < locs.length; j++) {
             $('.small').hide(); // cache les video active
@@ -127,6 +127,6 @@ function createMarker(i) {
 } // Fin createMarker
 
 // Cache les videos de la map
-//$('.small').hide();
+$('.small').hide();
 
 });
