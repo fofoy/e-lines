@@ -48,7 +48,7 @@ header h1::before { content: url('img/sprite_universes.png'); margin-right: .2em
         @keyframes iconAnim{ from{ width: 50px; height: 50px; background-size: 50px; margin: 100px; opacity: 0;} to { width:250px; height:250px; margin: 0; opacity: 1;} } 
 
 #head_home { padding-left:0px; }
-#head_home img { display:block; margin:0 auto; width: 385px;}
+#head_home img { display:block; margin:0 auto; width: 325px;}
 
 #choice {margin:0 auto; margin-top:4%; width:520px; height:520px;}
 #choice ul li {width:250px;height:250px;margin:5px;float:left;}
