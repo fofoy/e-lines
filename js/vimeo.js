@@ -24,7 +24,7 @@ $(document).ready(function() {
         });
 
         function getVideo(url) {
-            $.getScript('http://vimeo.com/api/oembed.json?url=' + url + '&autoplay=0&portrait=0&title=0&byline=0&callback=switchVideo');
+            $.getScript('http://vimeo.com/api/oembed.json?url=' + url + '&autoplay=1&portrait=0&title=0&byline=0&callback=switchVideo');
         }
 
         function setupGallery(videos) {
