@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html lang="en-US" xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta property="og:title" content=""/>
+    <meta property="og:type" content="video"/>
+    <meta property="og:url" content="http://www.imdb.com/title/tt0117500/"/>
+    <meta property="og:image" content="http://ia.media-imdb.com/rock.jpg"/>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script type="text/javascript" src="js/bdd.json"></script>
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/jquery.tinyscrollbar.min.js"></script>
+    <script type="text/javascript" src="js/jquery.tipsy.js"></script>
+    <script type="text/javascript" src="js/single.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!--[if (gte IE 6)&(lte IE 8)]>
+    <script type="text/javascript" src="js/selectivizr-min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="back"></a>
+        <a href="hub.html">
+            <img src="img/logo.png" alt="e-Lines">
+        </a>
+        <h1>Mountain</h1>
+        <nav>
+            <ul>
+                <li><a id="scrollbar1-anchor" href="#" title="Featured"></a></li>
+                <li><a id="scrollbar2-anchor" href="#" title="Videos"></a></li>
+                <li><a id="scrollbar3-anchor" href="#" title="Athletes"></a></li>
+                <li><a id="scrollbar4-anchor" href="#" title="Events"></a></li>
+                <li><a id="scrollbar5-anchor" href="#" title="Places"></a></li>
+                <li><a id="search" href="#" title="Search"></a></li>
+            </ul>
+        </nav>
+        <div id="search_area">
+            <form>
+                <label for="search">Search</label>
+                <input type="text" placeholder="Type your search here" name="search" id="q">
+                <input type="submit" value="OK">
+            </form>
+            <ul>
+                <li class="selected" id="s_video"><a href="#"><span></span>Videos</a></li>
+                <li class="selected" id="s_athlete"><a href="#"><span></span>Athletes</a></li>
+                <li class="selected" id="s_event"><a href="#"><span></span>Events</a></li>
+                <li class="selected" id="s_place"><a href="#"><span></span>Places</a></li>
+            </ul>
+            <ul id="res_search">
+            </ul>
+        </div>
+    </header>
+
+    <div id="scrollbar1">
+        <div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
+        <div class="viewport">
+            <div class="overview">
+                <div class="category">
+                    <h2 id="title-single"></h2>
+                    <div id="content">        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -90,19 +90,6 @@ $(function(){
         scrollbar1.tinyscrollbar_update(wcategory*4);
         return false;
     });
-	
-	//Recup query string
-    function getID(){
-    	var regexS = "[\\?&]id=([^&#]*)";
-    	var regex = new RegExp(regexS);
-    	var results = regex.exec(window.location.search);
-    	if(results == null){
-    		return "";
-    	}
-    	else{
-    	return decodeURIComponent(results[1].replace(/\+/g, " "));
-    	}
-	}
 
     //Search
         // détection de la saisie dans le champ de recherche
@@ -155,3 +142,16 @@ $(function(){
     }
 
 });
+
+//Recup ID query string
+    function getID(){
+        var regexS = "[\\?&]id=([^&#]*)";
+        var regex = new RegExp(regexS);
+        var results = regex.exec(window.location.search);
+        if(results == null){
+            return "";
+        }
+        else{
+        return decodeURIComponent(results[1].replace(/\+/g, " "));
+        }
+    }
