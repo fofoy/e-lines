@@ -41,13 +41,7 @@ var styledMap = new google.maps.StyledMapType(styles,{name: "Styled Map"});
 var mapOptions = {
     center: new google.maps.LatLng(41.38254, -12.362804),
     zoom: 2,
-    disableDefaultUI: true,/*
-    panControl: false,
-    zoomControl: false,
-    mapTypeControl: false,
-    scaleControl: false,
-    streetViewControl: false,
-    overviewMapControl: false,*/
+    disableDefaultUI: true,
     mapTypeControlOptions: {mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']}
 };
 
@@ -113,7 +107,6 @@ function createMarker(i) {
     };
     cityCircle = new google.maps.Circle(videoOptions);
 
-    //var infowindow = new google.maps.InfoWindow({content: locs[i][3]});
     google.maps.event.addListener(marker, 'click', function() {
         document.getElementById('title_marker').innerHTML = ' > ' + locs[i][2]; // Ajout du nom du lieu
         map.panTo(marker.getPosition());
