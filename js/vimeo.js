@@ -61,12 +61,14 @@ function switchVideo(video) {
     $('#embed').html(unescape(video.html));
 }
 
+// Raffraichissement des meta
 function refresh_infos(videos) {
     $('#title_video_big').html(videos[0].title);
     $('meta[property=og\\:title]').attr('content', videos[0].title + ' on e-Lines');
-    $('meta[property=og\\:url]').attr('content', videos[0].thumbnail_small);
-    $('meta[property=og\\:image]').attr('content', '');
+    $('meta[property=og\\:url]').attr('content', 'htpp://e-lines.com');
+    $('meta[property=og\\:image]').attr('content', videos[0].thumbnail_small);
 }
+
 //Detection de fin de chargement des videos et on recalcule le responsive
 document.getElementById('liste_video').api_addEventListener('finish', function(event) {
     responsive();
