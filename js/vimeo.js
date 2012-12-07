@@ -11,7 +11,7 @@ $(document).ready(function() {
 });
 
 function getVideo(url) {
-    $.getScript('http://vimeo.com/api/oembed.json?url=' + url + '&autoplay=1&portrait=0&title=0&byline=0&callback=switchVideo');
+    $.getScript('http://vimeo.com/api/oembed.json?url=http://vimeo.com/' + url + '&autoplay=1&portrait=0&title=0&byline=0&callback=switchVideo');
 }
 
 function setupGallery(videos) {
@@ -42,14 +42,15 @@ function setupGallery(videos) {
     // Switch to the video when a thumbnail is clicked
     $('#liste_video li a').click(function(event) {
         event.preventDefault();
-        getVideo(this.href);
-        var url = this.href.split('/')[3];
-        console.log(url);
+        url = this.href.split('?id=')[this.href.split('?id=').length - 1];
+        getVideo(url);
+
         $.getJSON('http://vimeo.com/api/v2/video/' + url + '.json?callback=?', {format: "json"}, function(videos) {
             $('#title_video_big').html(videos[0].title);
             $('meta[property=og\\:title]').attr('content', videos[0].title + ' on e-Lines');
             $('meta[property=og\\:url]').attr('content', '');
             $('meta[property=og\\:image]').attr('content', '');
+            refresh_infos(videos);
         });
         return false;
     });
@@ -60,6 +61,12 @@ function switchVideo(video) {
     $('#embed').html(unescape(video.html));
 }
 
+function refresh_infos(videos) {
+    $('#title_video_big').html(videos[0].title);
+    $('meta[property=og\\:title]').attr('content', videos[0].title + ' on e-Lines');
+    $('meta[property=og\\:url]').attr('content', videos[0].thumbnail_small);
+    $('meta[property=og\\:image]').attr('content', '');
+}
 //Detection de fin de chargement des videos et on recalcule le responsive
 document.getElementById('liste_video').api_addEventListener('finish', function(event) {
     responsive();

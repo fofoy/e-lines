@@ -159,7 +159,7 @@ header nav .hidden {display: none;}
     -webkit-transition:all .2s ease-in-out .1s;
 }
 #search_area label { display: block; color: #FFF; font-size: 1.2em; margin-left: .5em; margin-bottom: .5em; }
-#search_area input[type="text"] { width: 190px; height: 18px; border: 1px solid #FFF; padding: 5px; float: left; margin-left: .5em; }
+#search_area input[type="text"] { width: 195px; height: 18px; border: 1px solid #FFF; padding: 5px; float: left; margin-left: .5em; }
 #search_area input[type="submit"] { width: 30px; height: 30px; background: #000; border: 1px solid #FFF; color: #FFF; text-align: center; padding: 0; font-size: 1.2em; cursor: pointer; }
 #search_area ul { display: block; width: 100%; margin-top: 2em; }
 #search_area ul li { display: block; padding: .5em; margin-bottom: 1px; overflow: hidden; }
