@@ -4,7 +4,7 @@ $(document).ready(function() {
     var url_video = 'http://vimeo.com/' + id_video;
     $.getJSON('http://vimeo.com/api/v2/video/' + id_video + '.json?callback=?', {format: "json"}, function(videos) {
         vimeoUsername = videos[0].user_id;
-        $('#title_video_big').html(videos[0].title);
+        refresh_infos(videos);
     });
     getVideo(url_video);
     $.getScript('http://vimeo.com/api/v2/' + vimeoUsername + '/videos.json?callback=setupGallery');
@@ -46,10 +46,6 @@ function setupGallery(videos) {
         getVideo(url);
 
         $.getJSON('http://vimeo.com/api/v2/video/' + url + '.json?callback=?', {format: "json"}, function(videos) {
-            $('#title_video_big').html(videos[0].title);
-            $('meta[property=og\\:title]').attr('content', videos[0].title + ' on e-Lines');
-            $('meta[property=og\\:url]').attr('content', '');
-            $('meta[property=og\\:image]').attr('content', '');
             refresh_infos(videos);
         });
         return false;
@@ -63,13 +59,10 @@ function switchVideo(video) {
 
 // Raffraichissement des meta
 function refresh_infos(videos) {
+    document.title = videos[0].title + ' - on e-Lines';
     $('#title_video_big').html(videos[0].title);
-    $('meta[property=og\\:title]').attr('content', videos[0].title + ' on e-Lines');
+    $('meta[property=og\\:title]').attr('content', videos[0].title + ' - on e-Lines');
     $('meta[property=og\\:url]').attr('content', 'htpp://e-lines.com');
     $('meta[property=og\\:image]').attr('content', videos[0].thumbnail_small);
+    $('h2').append('<div class="fb-like" data-send="false" data-width="450" data-show-faces="true"></div>');
 }
-
-//Detection de fin de chargement des videos et on recalcule le responsive
-document.getElementById('liste_video').api_addEventListener('finish', function(event) {
-    responsive();
-});
