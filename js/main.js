@@ -44,7 +44,7 @@ $(function(){
         $('.big').width(blockBigWidth);
         $('.category').width(category);
         $('.overview').width(overview);
-
+        //Video
         if ($('.big_video').length > 0){
             var videoWidth = content * ratio;
             $('.big_video').height(content);
@@ -53,10 +53,12 @@ $(function(){
             $('.big_video #embed iframe').width(videoWidth);
             $('.overview').width(videoWidth + blockSmallWidth + marginBlocks*4);
         }
-
+        //Category
         var categoryFullWidth = $('.category_full_content li').length;
         if (categoryFullWidth%2!=0) {categoryFullWidth = categoryFullWidth+2}
         $('.category_full_content').width(categoryFullWidth/2*blockMidWidth)
+        //Athelete
+        $('#biopic img').css('max-height',viewport)
     }
 
     //Scrollbar
