@@ -3,7 +3,7 @@ $(document).ready( function() {
     var id_i = getID();
     $.each(donnees.item, function() {
         if(this.id==id_i&&this.featured=="no"){
-            $("#title-single").append(this.titre+" - "+this.soustitre);
+            $("#title_single").append(this.titre+" - "+this.soustitre);
             $("#biopic img").attr("src", this.image);
             $("#biopic img").attr("alt", this.titre);
             if(this.type=="athlete"){
