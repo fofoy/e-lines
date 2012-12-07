@@ -1,5 +1,6 @@
 $(function(){
-    
+    //Back option
+    $('.back').click(function(e){e.preventDefault(); history.back()});
 	// Bind tooltips
 	$('nav ul li a').tipsy({gravity:'s'});
 

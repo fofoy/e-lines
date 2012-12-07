@@ -48,6 +48,8 @@ var mapOptions = {
 var map = new google.maps.Map(document.getElementById("map_canvas"),mapOptions); // Initialisation de la map
 map.mapTypes.set('map_style', styledMap); // Application du style
 map.setMapTypeId('map_style');
+//Changer la couleur de fond du conteneur de la map
+document.getElementById("map_canvas").style.background='#091513';
 
 //Tableau des markers
 var locs = [ ["-28.0172605", "153.4256987", "Gold Coast", "content", "2172780","4"], ["38.2567969", "-85.7408659", "Louisville Extreme Park", "content2", "2172803","4"], ["-1.426001", "98.9245343", "Mentawais Island", "content3", "2172879","3"]];
