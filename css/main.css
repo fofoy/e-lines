@@ -256,14 +256,14 @@ iframe { width: 100%; height: 100%; }
 .category_full_content .mid {background: red;}
 
 /****
-    BIOPIC ATHLETE
+    BIOPIC ATHLETE/EVENT
 **/
 #biopic { width: 5000px; }
 #biopic img {float: left; margin: 5px;}
-#description { display: block; float: left; width:520px; margin: 5px; padding:5px; font-size: 1.6em; background: #f8f8f8; color: #2c2b2b; text-align:justify;}
+#description { display: block; float: left; width:520px; margin: 5px; padding:5px; font-size: 2.6em; background: #f8f8f8; color: #2c2b2b; text-align:justify;}
 #description h3 {padding: 5px; font-weight: bold;}
 #description p {float: left; width: 250px; margin: 5px;}
-#title_athlete_big { display: table; font-family: 'BebasNeueRegular'; font-size: 4.8em; color: #FFF; margin: 0 0 0 .3rem; text-decoration: none; }
+#title_single { display: table; font-family: 'BebasNeueRegular'; font-size: 4.8em; color: #FFF; margin: 0 0 0 .3rem; text-decoration: none; }
 /****
     TOOLTIPS
 **/
