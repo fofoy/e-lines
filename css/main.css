@@ -278,6 +278,12 @@ iframe { width: 100%; height: 100%; }
 .tipsy-west { background-position: left center; }
 
 /****
+    FACEBOOK
+**/
+.fb-like {float: left; margin: 1em;}
+.category_video h2 {float: left;}
+
+/****
     Media Queries 
 **/
 @media screen and (max-height: 768px) {
