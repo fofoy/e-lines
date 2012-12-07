@@ -50,8 +50,8 @@ $(function(){
             var videoWidth = content * ratio;
             $('.big_video').height(content);
             $('.big_video #embed iframe').height(content-marginBlocks*2);
-            $('.big_video').width(videoWidth);
-            $('.big_video #embed iframe').width(videoWidth);
+            $('.big_video').width(videoWidth-marginBlocks*2);
+            $('.big_video #embed iframe').width(videoWidth-marginBlocks*2);
             $('.overview').width(videoWidth + blockSmallWidth + marginBlocks*4);
         }
         //Category
