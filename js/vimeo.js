@@ -59,3 +59,8 @@ function setupGallery(videos) {
 function switchVideo(video) {
     $('#embed').html(unescape(video.html));
 }
+
+//Detection de fin de chargement des videos et on recalcule le responsive
+document.getElementById('liste_video').api_addEventListener('finish', function(event) {
+    responsive();
+});
