@@ -1,6 +1,6 @@
 $(function(){
     //Back option
-    $('.back').click(function(e){e.preventDefault(); history.back()});
+    $('.back').click(function(e){e.preventDefault(); history.back(); fadeIn();});
 	// Bind tooltips
 	$('nav ul li a').tipsy({gravity:'s'});
 
@@ -49,7 +49,7 @@ $(function(){
         if ($('.big_video').length > 0){
             var videoWidth = content * ratio;
             $('.big_video').height(content);
-            $('.big_video #embed iframe').height(content);
+            $('.big_video #embed iframe').height(content-marginBlocks*2);
             $('.big_video').width(videoWidth);
             $('.big_video #embed iframe').width(videoWidth);
             $('.overview').width(videoWidth + blockSmallWidth + marginBlocks*4);
