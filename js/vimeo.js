@@ -38,7 +38,7 @@ $(document).ready(function() {
                 ul.appendChild(li);
             
                 var a = document.createElement('a');
-                a.setAttribute('href', videos[j].url);
+                a.setAttribute('href', 'video.html?id='+videos[j].id);
                 li.appendChild(a);
             
                 var img = document.createElement('img');
@@ -50,10 +50,6 @@ $(document).ready(function() {
                 div.setAttribute('class', 'video');
                 div.innerHTML = videos[j].title;
                 a.appendChild(div);
-
-                //Reecriture des url des vidéos liées
-                $("#liste_video li:nth("+j+") a").attr("href", "video.html?id="+videos[j].id);//regénération des url avec les id vimeo
-                $("#liste_video li:nth("+j+") a img").attr("alt", videos[j].title);//alt
             }
 
             // Switch to the video when a thumbnail is clicked
